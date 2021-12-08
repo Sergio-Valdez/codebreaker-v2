@@ -43,7 +43,7 @@ public class GuessItemAdapter extends Adapter<Holder> {
   class Holder extends ViewHolder {
 
     private final ItemGuessBinding binding;
-    
+
     private Holder(@NonNull ItemGuessBinding binding) {
       super(binding.getRoot());
       this.binding = binding;

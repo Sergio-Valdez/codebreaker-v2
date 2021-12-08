@@ -84,11 +84,11 @@ public class GoogleSignInRepository {
   public Completable signOut() {
     return Completable
         .create((emitter) ->
-            client
-                .signOut()
-                .addOnSuccessListener((ignored) -> emitter.onComplete())
+                client
+                    .signOut()
+                    .addOnSuccessListener((ignored) -> emitter.onComplete())
 //                .addOnCompleteListener((ignored) -> logAccount(null))
-                .addOnFailureListener(emitter::onError)
+                    .addOnFailureListener(emitter::onError)
         )
         .subscribeOn(Schedulers.io());
   }
